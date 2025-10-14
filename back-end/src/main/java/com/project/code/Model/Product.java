@@ -1,4 +1,4 @@
-package com.project.code.model;
+package com.project.code.Model;
 
 import java.util.List; 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -27,7 +27,6 @@ public class Product {
 	private Double price;
 	
 	@NotNull(message = "sku field cannot be null")
-	@Table(name = "product", uniqueConstraints = @UniqueConstraint(columnNames = "sku"))
 	private String sku;
     
     @OneToMany(mappedBy = "product") 
